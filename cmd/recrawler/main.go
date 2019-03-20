@@ -1,4 +1,3 @@
-// Package main contains commands to run
 package main
 
 import (
@@ -9,6 +8,10 @@ import (
 
 	"github.com/joincivil/civil-events-crawler/pkg/crawlermain"
 	"github.com/joincivil/civil-events-crawler/pkg/utils"
+)
+
+const (
+	dryRun = false
 )
 
 func main() {
@@ -26,7 +29,7 @@ func main() {
 		os.Exit(2)
 	}
 
-	err = crawlermain.StartUpCrawler(config)
+	err = crawlermain.StartUpRecrawler(config)
 	if err != nil {
 		log.Errorf("Crawler error: err: %v\n", err)
 		os.Exit(2)

@@ -31,6 +31,8 @@ import (
 
 const (
 	blockHeaderExpirySecs = 60 * 5 // 5 mins
+
+	recrawl = true
 )
 
 // Config contains the configuration dependencies for the EventCollector
